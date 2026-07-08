@@ -1,0 +1,142 @@
+/* El Monte Leak Repair Experts — Theme 02: Slate and Steel */
+:root{
+  --bg:#2e3b49;
+  --bg-deep:#26313d;
+  --bg-deeper:#202a34;
+  --surface:#3a4856;
+  --surface-2:#42505f;
+  --accent:#e8632c;
+  --accent-dark:#cf4f1b;
+  --accent-text:#ffffff;
+  --text:#f2f5f8;
+  --muted:#b9c4cf;
+  --faint:#8fa0af;
+  --border:rgba(255,255,255,0.10);
+  --radius:6px;
+  --radius-lg:10px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:1rem;line-height:1.65;color:var(--muted);background:var(--bg)}
+h1,h2,h3,h4{color:var(--text);line-height:1.25;margin:0 0 .75rem}
+p{margin:0 0 1rem}
+a{color:#f0a274;text-decoration:underline;text-underline-offset:2px}
+a:hover{color:#ffb98e}
+img{max-width:100%;height:auto;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 1.25rem}
+.section{padding:3.5rem 0}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;padding:.5rem 1rem;z-index:999}
+.skip-link:focus{left:0}
+
+/* Header */
+.top-strip{background:var(--accent);height:4px}
+.site-header{background:var(--bg-deep);border-bottom:2px solid var(--accent);position:sticky;top:0;z-index:400}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px;gap:1rem}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.logo-mark{width:36px;height:36px;border-radius:8px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.05rem;flex-shrink:0}
+.logo-img{height:46px;width:auto;flex-shrink:0;object-fit:contain;display:block}
+.logo-name{color:var(--text);font-weight:800;font-size:1.02rem;line-height:1.1}
+.logo-sub{color:var(--faint);font-size:.7rem;line-height:1.1}
+.nav-menu{display:flex;align-items:center;gap:1.1rem;list-style:none;margin:0;padding:0}
+.nav-menu>li{position:relative}
+.nav-menu a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.92rem;padding:.4rem 0}
+.nav-menu a:hover{color:var(--text)}
+.dropdown-toggle{background:none;border:0;color:var(--muted);font:inherit;font-weight:600;font-size:.92rem;cursor:pointer;padding:.4rem 0}
+.dropdown-toggle:hover{color:var(--text)}
+.dropdown{display:none;position:absolute;top:100%;left:0;background:var(--bg-deep);border:1px solid var(--border);border-radius:var(--radius);min-width:270px;padding:.5rem 0;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.dropdown.open{display:block}
+.dropdown a{display:block;padding:.45rem 1rem;font-weight:500}
+.dropdown a:hover{background:var(--surface)}
+.nav-phone{background:var(--accent);color:var(--accent-text)!important;font-weight:700;padding:.6rem 1.05rem;border-radius:var(--radius);text-decoration:none;white-space:nowrap}
+.nav-phone:hover{background:var(--accent-dark);color:#fff!important}
+.hamburger{display:none;background:none;border:1px solid var(--border);color:var(--text);border-radius:var(--radius);padding:.45rem .6rem;font-size:1.1rem;cursor:pointer}
+
+/* Hero */
+.hero{padding:3rem 0 0}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2.25rem;align-items:center}
+.eyebrow{color:var(--accent);font-weight:700;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.7rem}
+.hero h1{font-size:clamp(1.625rem,4vw,2.5rem);font-weight:800;color:#fff}
+.hero h1 .city{font-style:italic;color:#f0a274}
+.hero-sub{font-size:1.06rem;max-width:56ch}
+.hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap;margin:1.4rem 0 .5rem}
+.btn{display:inline-block;font-weight:700;border-radius:var(--radius);padding:.875rem 1.5rem;text-decoration:none;font-size:1rem}
+.btn-primary{background:var(--accent);color:var(--accent-text)}
+.btn-primary:hover{background:var(--accent-dark);color:#fff}
+.btn-secondary{background:transparent;color:var(--text);border:1.5px solid var(--faint)}
+.btn-secondary:hover{border-color:var(--text);color:#fff}
+.hero-img{border-radius:var(--radius-lg);width:100%;height:auto;box-shadow:0 14px 40px rgba(0,0,0,.35)}
+
+/* Trust bar */
+.trust-bar{margin-top:2.25rem;background:var(--bg-deep);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:.9rem 0}
+.trust-items{display:flex;flex-wrap:wrap;gap:.5rem 1.75rem;justify-content:center;color:var(--muted);font-weight:600;font-size:.92rem}
+.trust-items span::before{content:"✓ ";color:var(--accent);font-weight:800}
+
+/* Service cards */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:1rem}
+.service-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;transition:transform .15s ease,border-color .15s ease}
+.service-card:hover{transform:translateY(-3px);border-color:var(--faint)}
+.service-card .glyph{font-size:1.5rem;margin-bottom:.4rem}
+.service-card h3{font-size:1.05rem;margin-bottom:.45rem}
+.service-card p{font-size:.92rem;margin-bottom:.6rem}
+.service-card .card-link{font-weight:700;font-size:.9rem}
+.view-all{margin-top:1.5rem;text-align:center}
+
+/* Bands */
+.band-deep{background:var(--bg-deep)}
+.band-deeper{background:var(--bg-deeper)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:2.25rem;align-items:center}
+.split img{border-radius:var(--radius-lg)}
+.mid-cta{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem 1.75rem;display:flex;align-items:center;justify-content:space-between;gap:1.25rem;flex-wrap:wrap;margin-top:2.5rem}
+.mid-cta p{margin:0;color:var(--text);font-weight:600}
+
+/* Era cards */
+.era-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-top:1.5rem}
+.era-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
+.era-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.era-card .era-body{padding:1.1rem 1.25rem}
+.era-card h3{font-size:1rem}
+.era-card p{font-size:.92rem;margin:0}
+
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--border);padding:1.25rem 0}
+.faq-item h3{font-size:1.08rem;margin-bottom:.5rem}
+.faq-item p{margin:0}
+
+/* CTA band */
+.cta-band{background:linear-gradient(120deg,var(--accent-dark),var(--accent));text-align:center;padding:3rem 0}
+.cta-band h2{color:#fff;font-size:clamp(1.4rem,3vw,2rem)}
+.cta-band p{color:#ffe3d3;max-width:60ch;margin:0 auto 1.25rem}
+.cta-band .btn-primary{background:#fff;color:var(--accent-dark)}
+.cta-band .btn-primary:hover{background:#ffe9dd;color:var(--accent-dark)}
+
+/* Footer */
+.site-footer{background:var(--bg-deeper);border-top:1px solid var(--border);padding:3rem 0 5.5rem;font-size:.92rem}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:2rem}
+.site-footer h4{font-size:.95rem;margin-bottom:.7rem}
+.site-footer ul{list-style:none;margin:0;padding:0}
+.site-footer li{margin-bottom:.4rem}
+.site-footer a{color:var(--muted);text-decoration:none}
+.site-footer a:hover{color:var(--text);text-decoration:underline}
+.footer-bottom{border-top:1px solid var(--border);margin-top:2rem;padding-top:1.25rem;color:var(--faint);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+
+/* Mobile sticky call bar */
+.sticky-call{position:fixed;bottom:0;left:0;right:0;background:var(--accent);text-align:center;padding:.8rem;z-index:500;display:none}
+.sticky-call a{color:#fff;font-weight:800;text-decoration:none;font-size:1.05rem}
+
+/* Breadcrumbs */
+.breadcrumbs{font-size:.85rem;color:var(--faint);padding:1rem 0 0}
+.breadcrumbs a{color:var(--faint)}
+
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+@media(max-width:900px){
+  .hero-grid,.split{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav-menu{display:none;position:absolute;top:66px;left:0;right:0;background:var(--bg-deep);flex-direction:column;align-items:flex-start;padding:1rem 1.25rem;gap:.4rem;border-bottom:2px solid var(--accent)}
+  .nav-menu.open{display:flex}
+  .dropdown{position:static;box-shadow:none;border:0;padding-left:1rem}
+  .hamburger{display:block}
+  .sticky-call{display:block}
+  .nav-phone{padding:.5rem .8rem;font-size:.88rem}
+}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
